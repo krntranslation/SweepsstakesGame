@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 
 namespace NationalSweepStakes
 {
-    public class Contestant 
-    {      
-        
-        public string contestantFirstName { get; set; }
-        public string contestantLastName { get; set; }
+    public class Contestant
+    {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
         public string emailAddress { get; set; }
         public double registrationNumber { get; set; }
-        
-        //public Contestant(string contestantFirstName, string contestantLastName, string emailAddress, double registrationNumber)
-        //{
-        //    this.contestantFirstName = contestantFirstName;
-        //    this.contestantLastName = contestantLastName;
-        //    this.emailAddress = emailAddress;
-        //    this.registrationNumber = registrationNumber;
-        //}
 
 
+        public Contestant(string firstName, string lastName, string emailAddress)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.emailAddress = emailAddress;
+            
+        }
 
     }
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+    

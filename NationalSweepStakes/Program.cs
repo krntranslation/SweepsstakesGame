@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace NationalSweepStakes
 {
-    class Program
+    public class Program
     {
+        
+
         static void Main(string[] args)
         {
             
-            
+            UserInterface.GetUserInfo("", "", "");
+            Sweepstakes sweepstakes = new Sweepstakes();
+            sweepstakes.RegisterContestant();
+
             
 
 

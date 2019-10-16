@@ -4,17 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NationalSweepStakes.Stack
+namespace NationalSweepStakes
 {
-    public class SweepstakesStackManager : SweepstakesManager
+    public class SweepstakesStackManager : ISweepstakesManager
     {
-        public void PushToStack()
+        Stack<string> stack = new Stack<string>();
+        
+        public SweepstakesStackManager()
         {
-            Stack<int> stack = new Stack<int>();
 
-            stack.Push(001);
-            stack.Push(002);
-            stack.Push(003);
         }
+        public Sweepstakes GetSweepstakes()
+        {
+            
+            // write method to get the sweepstakes the user wants
+        }
+
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+           //need to put in the sweepstakes into a stack 
+        }
+
+       
+        
+        //public void PushToStack()
+        //{
+        //    Stack<string> stack = new Stack<string>();
+        //    stack.Push("");
+
+        //}
     }
 }
