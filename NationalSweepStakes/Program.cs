@@ -8,17 +8,16 @@ namespace NationalSweepStakes
 {
     public class Program
     {
-        
 
         static void Main(string[] args)
         {
-            
-            UserInterface.GetUserInfo("", "", "");
-            Sweepstakes sweepstakes = new Sweepstakes();
-            sweepstakes.RegisterContestant();
+            MarketingFirm markFirm = new MarketingFirm(); //not the racist cop
 
-            
+            markFirm.GetManager();
 
+            markFirm.CreateSweepstakes();
+
+            //my errors are on markentingFirm class, line 28, 30
 
         }
     }

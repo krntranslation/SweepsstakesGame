@@ -6,33 +6,21 @@ using System.Threading.Tasks;
 
 namespace NationalSweepStakes
 {
-    public class SweepstakesQueueManager : ISweepstakesManager
+    public class SweepstakesQueueManager : ISweepstakesManager 
     {
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
 
-        Queue<string> queue = new Queue<string>();
-        
-        public SweepstakesQueueManager()
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            
+            queue.Enqueue(sweepstakes);
         }
         public Sweepstakes GetSweepstakes()
         {
-            //get the sweepstakes im looking for
-       
+            Console.WriteLine("Remove sweepstakes");
+            return queue.Dequeue();
         }
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
-        {
-            //insert the sweepstakes into Quene
-        
-        }
+
        
 
     }
 }        
-//public void EnqueneOnQuene()
-        //{
-        //    Queue<string> queue = new Queue<string>();
-
-        //    queue.Enqueue("");
-
-        //}

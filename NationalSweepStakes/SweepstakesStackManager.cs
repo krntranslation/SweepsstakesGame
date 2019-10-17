@@ -8,30 +8,19 @@ namespace NationalSweepStakes
 {
     public class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack<string> stack = new Stack<string>();
-        
-        public SweepstakesStackManager()
-        {
+        Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
 
-        }
+
         public Sweepstakes GetSweepstakes()
         {
-            
-            // write method to get the sweepstakes the user wants
+            Console.WriteLine("sweepstake removed");
+            return stack.Pop();
         }
-
         public void InsertSweepstakes(Sweepstakes sweepstakes)
-        {
-           //need to put in the sweepstakes into a stack 
+        { 
+           stack.Push(sweepstakes);
         }
 
-       
-        
-        //public void PushToStack()
-        //{
-        //    Stack<string> stack = new Stack<string>();
-        //    stack.Push("");
-
-        //}
+     
     }
 }

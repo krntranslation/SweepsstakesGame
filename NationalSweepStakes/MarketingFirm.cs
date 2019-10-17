@@ -8,16 +8,29 @@ namespace NationalSweepStakes
 {
     public class MarketingFirm
     {
+        public ISweepstakesManager manager;
 
-        public MarketingFirm()
+        public string newSweepstakes;
+        public string contestant1;
+
+        public void GetManager()
         {
-            static void StartSweepstakes()
-            {
 
-            }
-            
+            manager = UserInterface.GetManager();
+
         }
-        
+        public void CreateSweepstakes()
+        {
+            Console.WriteLine("Please add a sweepstakes");
+            newSweepstakes = Console.ReadLine();
+            Sweepstakes newSweep = new Sweepstakes(newSweepstakes);
+
+            contestant1 =(UserInterface.GetUserInfo());   //trying to return the new contestant to registercontestant
+
+            newSweep.RegisterContestant(contestant1);       // stuck on how to register contestant, tried converting to string
+
+        }
     }
+ 
 }
 

@@ -12,22 +12,36 @@ namespace NationalSweepStakes
     public static class UserInterface 
     {
 
-        public static Contestant GetUserInfo(string firstName, string lastName, string emailAddress)
+        public static Contestant GetUserInfo()
         {
        
             Console.WriteLine("Welcome to the sweepstakes! Please enter your first name");
-            firstName = Console.ReadLine();
+            string firstName = Console.ReadLine();
             Console.WriteLine("Please enter your last name");
-            lastName = Console.ReadLine();
+            string lastName = Console.ReadLine();
             Console.WriteLine("Please type in your email address");
-            emailAddress = Console.ReadLine();
+            string emailAddress = Console.ReadLine();
             Console.WriteLine("Generating your registration number");
     
             Contestant contestant = new Contestant(firstName, lastName, emailAddress);
 
-            return contestant;
+            return(contestant);
        
         
+        }
+        public static ISweepstakesManager GetManager()
+        {
+            Console.WriteLine("please choose a manage\nEnter in either stack or queue.");
+            string pickStackOrPop = Console.ReadLine();
+            switch (pickStackOrPop)
+            {
+                case "stack":
+                    return new SweepstakesStackManager();
+                case "queue":
+                    return new SweepstakesQueueManager();
+                default:
+                    throw new ApplicationException(string.Format("That's not a choice"));
+            }
         }
        
     }

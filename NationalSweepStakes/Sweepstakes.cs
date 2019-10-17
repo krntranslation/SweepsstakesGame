@@ -14,7 +14,6 @@ namespace NationalSweepStakes
         public Sweepstakes carPrize;
         public Sweepstakes airplanePrize;
 
-        //private int winningNumbers;
 
         public Sweepstakes(string name)
         {
